@@ -2,6 +2,13 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "orange-inbox-web",
   "main": ".open-next/worker.js",
+
+  // Served only on the custom domain behind Cloudflare Access. The app trusts
+  // the Access identity header, so the open workers.dev URL must stay off.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "mail.ciunowicz.com", "custom_domain": true }],
+
   "compatibility_date": "2026-05-08",
   "compatibility_flags": [
     "nodejs_compat",
@@ -67,7 +74,7 @@
   // private key is a Worker secret; provision via `pnpm vapid` →
   // `wrangler secret put VAPID_PRIVATE_KEY`. setup.sh handles bootstrap.
   "vars": {
-    "VAPID_PUBLIC_KEY": "BH8smumQaKTZZh9luj79lTPSVZEfCJbPW6smaIGieSbzYmHxDzEQyZ-wkMhsoOyLJqi6bxfHZTN8fl0YeezpdxE",
+    "VAPID_PUBLIC_KEY": "BKKkyBAnP3HS90LuZC0QZ3teY7RXONYZUFr3QAMLC9x3Bb_ihQsbUMVlf6ojMOY4XZc7UEQRHx2MYdia8ltddn4",
     "VAPID_SUBJECT": "mailto:admin@ciunowicz.com"
   }
 
