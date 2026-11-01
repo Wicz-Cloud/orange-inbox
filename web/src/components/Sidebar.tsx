@@ -316,9 +316,10 @@ export default function Sidebar({
       <div className={`p-3 flex items-center ${collapsed ? "justify-center" : "gap-2"}`}>
         {!collapsed && (
           <>
-            <span className="inline-block w-3 h-3 rounded-full bg-[var(--color-brand)]" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.svg" alt="" className="w-7 h-7 rounded-lg" />
             <span className="font-display text-[1.0625rem] font-semibold tracking-tight truncate">
-              Orange Inbox
+              Wicz Box
             </span>
           </>
         )}

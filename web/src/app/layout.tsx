@@ -27,15 +27,15 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Orange Inbox",
-  description: "Gmail-like webmail on Cloudflare",
-  applicationName: "Orange Inbox",
+  title: "Wicz Box",
+  description: "Wicz family mail",
+  applicationName: "Wicz Box",
   // manifest link is rendered manually below with crossOrigin="use-credentials"
   // so the browser sends the Cloudflare Access cookie when fetching it.
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Orange Inbox",
+    title: "Wicz Box",
   },
   icons: {
     icon: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f38020",
+  themeColor: "#7c3aed",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

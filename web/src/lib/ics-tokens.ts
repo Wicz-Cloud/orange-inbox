@@ -223,8 +223,8 @@ export async function feedCalendarName(
   userId: string,
   scope: string,
 ): Promise<string> {
-  if (scope === ALL_SCOPE) return "Orange Inbox";
-  if (scope === PERSONAL_SCOPE) return "Orange Inbox — Personal";
+  if (scope === ALL_SCOPE) return "Wicz Box";
+  if (scope === PERSONAL_SCOPE) return "Wicz Box — Personal";
   const row = await getDb()
     .prepare(
       `SELECT mb.local_part, d.name AS domain_name
@@ -236,8 +236,8 @@ export async function feedCalendarName(
     .bind(scope, userId)
     .first<{ local_part: string; domain_name: string }>();
   return row
-    ? `Orange Inbox — ${row.local_part}@${row.domain_name}`
-    : "Orange Inbox";
+    ? `Wicz Box — ${row.local_part}@${row.domain_name}`
+    : "Wicz Box";
 }
 
 // Calendar feed reader — scope-aware.

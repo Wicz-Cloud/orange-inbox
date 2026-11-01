@@ -10,9 +10,9 @@ type ExtendedManifest = MetadataRoute.Manifest & Record<string, unknown>;
 export default function manifest(): MetadataRoute.Manifest {
   const m: ExtendedManifest = {
     id: "/",
-    name: "Orange Inbox",
-    short_name: "Orange",
-    description: "Gmail-like webmail on Cloudflare",
+    name: "Wicz Box",
+    short_name: "Wicz Box",
+    description: "Wicz family mail",
     categories: ["productivity", "communication"],
     lang: "en",
     dir: "ltr",
@@ -22,7 +22,7 @@ export default function manifest(): MetadataRoute.Manifest {
     display_override: ["window-controls-overlay", "standalone", "minimal-ui"],
     orientation: "portrait",
     background_color: "#0a0a0a",
-    theme_color: "#f38020",
+    theme_color: "#7c3aed",
     prefer_related_applications: false,
     launch_handler: { client_mode: "navigate-existing" },
     protocol_handlers: [{ protocol: "mailto", url: "/compose?mailto=%s" }],

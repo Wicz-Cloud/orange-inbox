@@ -51,7 +51,7 @@ export default function GlobalError({
       >
         <div style={{ maxWidth: 360, textAlign: "center", padding: "0 24px" }}>
           <h1 style={{ fontSize: 18, fontWeight: 600, margin: "0 0 8px" }}>
-            Orange Inbox hit a snag
+            Wicz Box hit a snag
           </h1>
           <p style={{ fontSize: 14, color: "#525252", margin: "0 0 16px" }}>
             The app failed to load. This is usually fixed by reloading.

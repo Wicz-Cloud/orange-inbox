@@ -249,7 +249,7 @@ export default function SchedulingManager({ userId }: { userId: string }) {
           {!googleConfigured && (
             <p className="mb-2 text-sm text-amber-700 dark:text-amber-500">
               Google Calendar isn&apos;t configured on this deployment. Set
-              GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET to enable it. Orange Mail
+              GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET to enable it. Wicz Box
               calendars work without it.
             </p>
           )}

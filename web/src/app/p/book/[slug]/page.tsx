@@ -35,7 +35,7 @@ export default async function BookingPage({ params }: PageProps) {
           turnstileSiteKey={turnstileSiteKey()}
         />
         <p className="mt-8 text-center text-xs text-neutral-400">
-          Scheduling by Orange Mail
+          Scheduling by Wicz Box
         </p>
       </div>
     </main>
