@@ -23,7 +23,7 @@
     {
       "binding": "DB",
       "database_name": "orange-inbox",
-      "database_id": "eb1b4c90-36c6-4806-a38b-5c6ceb5dd1d5",
+      "database_id": "62d0caa5-4d0c-49f9-8a09-bec22614de5d",
       "migrations_dir": "../db/migrations"
     }
   ],
@@ -44,7 +44,7 @@
   "kv_namespaces": [
     {
       "binding": "DRAFTS",
-      "id": "89cd821d5d734f52b0fb29ea8d1859c4"
+      "id": "fbfae7477d2142babcc6fdae0227f9fd"
     }
   ],
 
@@ -68,7 +68,7 @@
   // `wrangler secret put VAPID_PRIVATE_KEY`. setup.sh handles bootstrap.
   "vars": {
     "VAPID_PUBLIC_KEY": "BH8smumQaKTZZh9luj79lTPSVZEfCJbPW6smaIGieSbzYmHxDzEQyZ-wkMhsoOyLJqi6bxfHZTN8fl0YeezpdxE",
-    "VAPID_SUBJECT": "mailto:admin@example.com"
+    "VAPID_SUBJECT": "mailto:admin@ciunowicz.com"
   }
 
   // INTERNAL_SECRET and VAPID_PRIVATE_KEY are provisioned as Worker secrets
