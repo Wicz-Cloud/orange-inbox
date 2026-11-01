@@ -1,0 +1,8 @@
+{
+  "domain": "ciunowicz.com",
+  "admin": "you@example.com",
+  "people": [
+    { "local_part": "parent2", "display_name": "Parent Two", "role": "admin" },
+    { "local_part": "kid1", "display_name": "Kid One", "role": "kid" }
+  ]
+}

@@ -36,3 +36,6 @@ yarn-error.log*
 
 # Claude Code session metadata (per-machine, not for the repo)
 .claude/
+
+# family seed input (names/emails)
+family.json
