@@ -1,3 +1,4 @@
+import { resolveHold } from "./allowlist";
 import { runCron } from "./cron";
 import { notify } from "./notify";
 import { parseEmail } from "./parse";
@@ -20,11 +21,12 @@ export default {
       const rawBytes = await new Response(forRaw).arrayBuffer();
 
       const parsed = await parseEmail(forParse, env.TRUSTED_AUTHSERV_ID);
-      const thread = await findOrCreateThread(env, recipient.mailboxId, parsed);
-      const result = await storeMessage(env, ctx, recipient, thread, parsed, rawBytes);
+      const target = await resolveHold(env, recipient, parsed.from.addr, parsed.authResults);
+      const thread = await findOrCreateThread(env, target.mailboxId, parsed);
+      const result = await storeMessage(env, ctx, target, thread, parsed, rawBytes);
 
       console.log(
-        `inbound ${result.duplicate ? "(dup)" : "ok"} mailbox=${recipient.mailboxId} ` +
+        `inbound ${result.duplicate ? "(dup)" : "ok"}${target.held ? " HELD" : ""} mailbox=${target.mailboxId} ` +
           `thread=${result.threadId} msg=${result.messageId} from=${parsed.from.addr}`,
       );
     } catch (err) {
